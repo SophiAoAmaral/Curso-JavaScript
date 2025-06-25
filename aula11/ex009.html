@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naacionalidade</title>
+    <style>
+        body{
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>Qual pais vc reside?</p>
+     <input type="text" id="txtp">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+
+    <div>
+        <h1>MEDIA</h1>
+        Digite sua primeira nota: <input type="number" name="nota1" id="nota1"> <br>
+        Digite sua segunda nota: <input type="number" name="nota2" id="nota2"> <br>
+        <input type="button" value="Calcular" onclick="calcular()">
+        <div id="texto">
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+    var pais= document.querySelector('#txtp')
+    var res= document.querySelector('#res')
+    
+     function verificar(){
+        var pais= document.querySelector('#txtp')
+        var res= document.querySelector('#res')
+        pais = pais.value
+
+        
+        if (pais == 'Brasil' || pais =="brasil"){
+            res.innerHTML = `Voce reside no ${pais} e é <strong>BRASILEIRA</strong>`
+        }else{
+            res.innerHTML = `Voce reside no ${pais} e é <strong>ESTRANGEIRO</strong>`
+        }
+     }
+
+     function calcular(){
+        var n1 = document.querySelector('#nota1')
+        var n2 = document.querySelector('#nota2')
+        var texto = document.querySelector('#texto')
+         nota1= Number(n1.value)
+         nota2 =Number(n2.value)
+        var media =(nota1 + nota2) /2
+
+        if(media >= 5){
+            texto.innerHTML= `Sua media foi ${media} e voce esta <strong>APROVADO!!</strong>`
+        }else{
+             texto.innerHTML= `Sua media foi ${media} e voce esta <strong>REPROVADO!!</strong>`
+        }
+
+     }
+
+
+
+
+    </script>
+</body>
+</html>

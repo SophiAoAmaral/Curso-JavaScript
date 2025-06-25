@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com dom</title>
+    <style>
+        body{
+            background-color: rgb(235, 231, 232);
+            color: rosybrown;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg" class="mensagem">Clique em mim</div>
+
+    <script>
+        let corpo
+        let p1 = document.getElementsByTagName('p')[0]//o numero do paragrafo
+        window.document.write( 'Esta escrito asssim: ' + p1.innerText)
+        p1.style.color ='pink'
+
+        let d= document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou arguardando....'
+
+        /*
+        var d = document.getelementsbyN  ame('msg')[0] quando é ELEMENTS usar []  
+        
+        */
+        let a = document.querySelector('.mensagem')
+        a.style.color = 'black'
+
+    </script>
+</body>
+</html>
