@@ -1,13 +1,13 @@
 function verificar(){
-    var data = new Date()
-    var ano = data.getFullYear()
+    var data = new Date()//vendo a data
+    var ano = data.getFullYear()//vendo o ano
     var fano = document.querySelector('#txtano')
     var res = document.querySelector('#res')
     if (fano.value.length == 0 || fano.value > ano){
         window.alert('[ERRO] Verifique os dados e tente novamente')
     }else{
         var fsex= document.getElementsByName('radsex')
-        var idade = ano - Number(fano.value)
+        var idade = ano - Number(fano.value)//calculando a idade
         var genero= ''
         var img= document.createElement('img')//criando tag img
         img.setAttribute('id', 'foto')//dando um id e nome
@@ -45,6 +45,6 @@ function verificar(){
         }
         res.style.textAlign='center'
         res.innerHTML= `Detectamos ${genero} com ${idade} anos`
-        res.appendChild(img)
+        res.appendChild(img)//adicfionando como uma tag filho
     }
 }
