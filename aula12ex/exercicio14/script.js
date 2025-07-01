@@ -7,8 +7,8 @@ var hora =data.getHours() // hora do sistema
 msg.innerHTML = `Agora são ${hora} horas.`
 if(hora >=0 && hora < 12){
     //bom dia!
-    img.src = 'imgs/amanhcendo.png'
-    document.body.style.background = '#DF9D4F'
+    img.src = 'imgs/amanhcendo.png'// adicionando uma imagem por javascript
+    document.body.style.background = '#DF9D4F'//muda a cor de fundo do site pelo javascript
 
 }else if(hora >= 12 && hora < 18){
     img.src= 'imgs/tarde.png'
