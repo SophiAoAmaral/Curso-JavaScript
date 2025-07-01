@@ -9,7 +9,9 @@ function verificar(){
         var fsex= document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)//calculando a idade
         var genero= ''
-        var img= document.createElement('img')//criando tag img
+        var img= document.createElement('img')//criand
+        // 
+        // o tag img
         img.setAttribute('id', 'foto')//dando um id e nome
 
         if(fsex[0].checked){
